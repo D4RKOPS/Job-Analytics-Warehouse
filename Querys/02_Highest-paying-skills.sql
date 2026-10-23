@@ -73,7 +73,7 @@ WHERE
 GROUP BY
    sd.skills
 
-  HAVING COUNT(*) > 5 
+  HAVING COUNT(jpf.*) > 5 
 ORDER BY  median_salary DESC ,posting_count DESC
 
   ;
@@ -120,7 +120,7 @@ WHERE
     jpf.job_title_short = 'Data Engineer'           
 GROUP BY
    sd.skills
-HAVING COUNT(*) > 100 
+HAVING COUNT(jpf.*) > 100 
 
 ORDER BY  median_salary DESC ,posting_count DESC
 
